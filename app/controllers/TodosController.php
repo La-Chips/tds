@@ -5,6 +5,7 @@ namespace controllers;
 use Ubiquity\attributes\items\router\Get;
 use Ubiquity\attributes\items\router\Post;
 use Ubiquity\attributes\items\router\Route;
+use Ubiquity\cache\CacheManager;
 use Ubiquity\controllers\Router;
 use Ubiquity\utils\http\URequest;
 use Ubiquity\utils\http\USession;
@@ -46,9 +47,15 @@ class TodosController extends ControllerBase
   {
   }
 
-  #[Get(path: "todos/saveList", name: "todos.save")]
+  #[Get(path: "todos/save", name: "todos.save")]
   public function saveList()
   {
+    $id = uniqid();
+    $list = USession::get(self::LIST_SESSION_KEY);
+    CacheManager::$cache->store(self::CACHE_KEY . $id, $list);
+
+    $this->showMessage("Liste Sauvegardée", $id);
+    $this->displayList($list);
   }
   #[Get(path: "todos/new/{force}", name: "todos.new")]
   public function newlist($force = false)
@@ -63,11 +70,10 @@ class TodosController extends ControllerBase
         "",
         "",
         [
-          ['url' => Router::path('todos.new',[1]), 'caption' => 'Créer une nouvelle liste', 'style' => 'basic inverted'],
+          ['url' => Router::path('todos.new', [1]), 'caption' => 'Créer une nouvelle liste', 'style' => 'basic inverted'],
           ['url' => Router::path('todos.menu'), 'caption' => 'Annuler', 'style' => 'basic inverted']
         ]
       );
-      
     }
     $this->displayList(USession::get(self::LIST_SESSION_KEY));
   }
