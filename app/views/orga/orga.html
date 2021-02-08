@@ -1,18 +1,18 @@
 
 
-<div>
+<div class="title-container">
     <a  class="ui basic inverted button"><i class="home icon"></i>{{orga.name}}</a>
 </div>
-<div class="ui two column stackable grid container">
+<div class="content">
     <ul><b>Utilisateurs</b>
         {%for user in orga.getUsers%}
-            <li>{{user}}</li>
+            <li><a href="{{path('user') ~loop.index}}">{{user}}</a></li>
         {%endfor%}
         </ul>
     
         <ul><b>Groupes</b>
             {%for user in orga.getGroupes%}
-                <li>{{user}}
+                <li class="flex">{{user}}
                     <div > <i class="user icon"></i></div>
                 </li>
             {%endfor%}

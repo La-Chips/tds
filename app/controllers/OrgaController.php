@@ -33,4 +33,16 @@ class OrgaController extends ControllerBase{
 		$this->loadView('orga/orga.html',['orga'=>$orga]);
 	}
 
+	#[Route(path: "orga/getUser/{id}", name:"user")]
+	public function getUser($id){
+		// $user = DAO::getById(User::class,$id);
+		$this->loadView('orga/users.html');
+	}
+
+	#[Route(path: "orga/getGroup/{id}", name:"group")]
+	public function getGroup($id){
+		// $user = DAO::getById(User::class,$id);
+		$this->loadView('orga/groupe.html');
+	}
+
 }
