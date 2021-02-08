@@ -6,8 +6,8 @@ return array(
 			"dbName"=>"",
 			"serverName"=>"mysql.info.unicaen.fr",
 			"port"=>3306,
-			"user"=>"root",
-			"password"=>"",
+			"user"=>21905584,
+			"password"=>"hiec0xaeMiqu0tha",
 			"options"=>array(),
 			"cache"=>false,
 			"wrapper"=>"Ubiquity\\db\\providers\\pdo\\PDOWrapper"

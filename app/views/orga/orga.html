@@ -1,0 +1,20 @@
+
+
+<div>
+    <a  class="ui basic inverted button"><i class="home icon"></i>{{orga.name}}</a>
+</div>
+<div class="ui two column stackable grid container">
+    <ul><b>Utilisateurs</b>
+        {%for user in orga.getUsers%}
+            <li>{{user}}</li>
+        {%endfor%}
+        </ul>
+    
+        <ul><b>Groupes</b>
+            {%for user in orga.getGroupes%}
+                <li>{{user}}
+                    <div > <i class="user icon"></i></div>
+                </li>
+            {%endfor%}
+            </ul>
+</div>

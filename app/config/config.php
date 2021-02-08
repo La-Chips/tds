@@ -3,11 +3,11 @@ return array(
 	"siteUrl"=>"http://127.0.0.1:8090/",
 	"database"=>[
 			"type"=>"mysql",
-			"dbName"=>"21905584_0",
-			"serverName"=>"mysql.info.unicaen.fr",
+			"dbName"=>"messagerie",
+			"serverName"=>"127.0.0.1",
 			"port"=>3306,
-			"user"=>21905584,
-			"password"=>"hiec0xaeMiqu0tha",
+			"user"=>"root",
+			"password"=>"",
 			"options"=>array(),
 			"cache"=>false,
 			"wrapper"=>"Ubiquity\\db\\providers\\pdo\\PDOWrapper"
