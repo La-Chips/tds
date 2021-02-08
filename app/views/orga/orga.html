@@ -12,7 +12,7 @@
     
         <ul><b>Groupes</b>
             {%for user in orga.getGroupes%}
-                <li class="flex">{{user}}
+                <li class="flex"><a href="{{path('group') ~loop.index}}">{{user}}</a>
                     <div > <i class="user icon"></i></div>
                 </li>
             {%endfor%}
