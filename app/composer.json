@@ -1,0 +1,5 @@
+{
+    "require": {
+        "phpmv/ubiquity": "dev-master"
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "packages": [
+        {
+            "name": "phpmv/ubiquity",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpMv/ubiquity.git",
+                "reference": "1c587f43416cc8c336be285e2a943affadc9aa64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/1c587f43416cc8c336be285e2a943affadc9aa64",
+                "reference": "1c587f43416cc8c336be285e2a943affadc9aa64",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "phpmv/php-mv-ui": "^2.2",
+                "phpmv/ubiquity-codeception": "dev-master",
+                "phpmv/ubiquity-dev": "^0.1",
+                "phpmv/ubiquity-devtools": "dev-master"
+            },
+            "time": "2021-02-20T18:22:50+00:00",
+            "default-branch": true,
+            "type": "framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "Ubiquity\\": "src/Ubiquity/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-Christophe HERON",
+                    "email": "myaddressmail@gmail.com",
+                    "role": "Lead developer"
+                }
+            ],
+            "description": "Ubiquity-framework",
+            "keywords": [
+                "framework",
+                "mvc",
+                "orm",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/phpMv/ubiquity/issues",
+                "source": "https://github.com/phpMv/ubiquity/tree/master"
+            },
+            "install-path": "../phpmv/ubiquity"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

@@ -1,0 +1,80 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5959dc0b4cc2f77b6ee85f9c4bbab523",
+    "packages": [
+        {
+            "name": "phpmv/ubiquity",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpMv/ubiquity.git",
+                "reference": "1c587f43416cc8c336be285e2a943affadc9aa64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/1c587f43416cc8c336be285e2a943affadc9aa64",
+                "reference": "1c587f43416cc8c336be285e2a943affadc9aa64",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "phpmv/php-mv-ui": "^2.2",
+                "phpmv/ubiquity-codeception": "dev-master",
+                "phpmv/ubiquity-dev": "^0.1",
+                "phpmv/ubiquity-devtools": "dev-master"
+            },
+            "default-branch": true,
+            "type": "framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ubiquity\\": "src/Ubiquity/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-Christophe HERON",
+                    "email": "myaddressmail@gmail.com",
+                    "role": "Lead developer"
+                }
+            ],
+            "description": "Ubiquity-framework",
+            "keywords": [
+                "framework",
+                "mvc",
+                "orm",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/phpMv/ubiquity/issues",
+                "source": "https://github.com/phpMv/ubiquity/tree/master"
+            },
+            "time": "2021-02-20T18:22:50+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "phpmv/ubiquity": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
