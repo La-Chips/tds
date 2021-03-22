@@ -1,8 +1,9 @@
 <div class="ui container">
+    <h1>Store</h1>
     <div class="ui two column  grid">
         <div class="column black">
             {% for section in sections %}
-            <a href="{{ path('section', [section.id]) }}">{{section.name}} ({{ section.products|length }})</a><br>
+            <a href="/{{ path('section', [section.id]) }}">{{section.name}} ({{ section.products|length }})</a><br>
             {% endfor %}
         </div>
         <div class="column">

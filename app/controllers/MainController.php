@@ -29,7 +29,7 @@ class MainController extends ControllerBase
 		return new MyAuth($this);
 	}
 
-	#[Route('store', name: 'store')]
+	#[Route('/store', name: 'store')]
 	public function store()
 	{
 		$store = DAO::getAll(Product::class, false, false);
@@ -38,12 +38,12 @@ class MainController extends ControllerBase
 		$this->loadView('MainController/store.html', ['store' => $store, 'promo' => $promos, 'sections' => $sections]);
 	}
 
-	#[Route('section/{id}', name: 'section')]
+	#[Route('/section/{id}', name: 'section')]
 	public function section($id)
 	{
 		$product = DAO::getAll(Product::class, 'idSection= ' . $id, [USession::get("idSection")]);
 		$section = DAO::getById(Section::class, $id, ['products']);
 		$sections = DAO::getAll(Section::class, '', ['products']);
-		$this->loadDefaultView(['section' => $section, 'sections' => $sections, 'product' => $product]);
+		$this->loadView('MainController/section.html', ['section' => $section, 'sections' => $sections, 'product' => $product]);
 	}
 }
