@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'f291411ee2fd413ebf96bb7f4f5a38b189d6b8d3',
+    'reference' => 'f4abdb7a181542cede8a9a349c80190c303f309c',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'f291411ee2fd413ebf96bb7f4f5a38b189d6b8d3',
+      'reference' => 'f4abdb7a181542cede8a9a349c80190c303f309c',
     ),
     'czproject/git-php' => 
     array (
