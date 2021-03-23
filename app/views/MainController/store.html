@@ -1,7 +1,9 @@
 <div class="ui container">
-    <h1>Store</h1>
+
     <div class="ui two column  grid">
+
         <div class="column black">
+            <h1>Store</h1>
             {% for section in sections %}
             <a href="/{{ path('section', [section.id]) }}">{{section.name}} ({{ section.products|length }})</a><br>
             {% endfor %}
@@ -13,7 +15,7 @@
                     <tr>
                         {% for prod in promo %}
                         <td>
-                            <a href="/{{path('section', [prod.section])}}{{path('product', [prod.id])}}">
+                            <a href="/{{ path('product', [section.id, prod.id]) }}">
                                 <img src="../../public/assets/img/{{prod.image}}.jpg" alt="alternatetext" width="100"
                                     height="80">
 

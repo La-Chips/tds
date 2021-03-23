@@ -42,15 +42,18 @@ class MainController extends ControllerBase
 	#[Route('/section/{id}', name: 'section')]
 	public function section($id)
 	{
-		$product = DAO::getAll(Product::class, 'idSection= ' . $id, [USession::get("idSection")]);
+		$product = DAO::getAll(Product::class, 'idSection=' . $id, [USession::get("idSection")]);
 		$section = DAO::getById(Section::class, $id, ['products']);
 		$sections = DAO::getAll(Section::class, '', ['products']);
 		$this->loadView('MainController/section.html', ['section' => $section, 'sections' => $sections, 'product' => $product]);
 	}
 
-	#[Route('/product/{idProduct}', name: 'product')]
+	#[Route('product/{idSection}/{idProduct}', name: 'product')]
 	public function product($idSection, $idProduct)
 	{
-		$this->loadView('MainController/product.html');
+		$product = DAO::getById(Product::class, $idProduct, ['sections']);
+		$section = DAO::getById(Section::class, $idSection, ['products']);
+		$sections = DAO::getAll(Section::class, '', ['products']);
+		$this->loadView('MainController/product.html', ['section' => $section, 'sections' => $sections, 'product' => $product]);
 	}
 }

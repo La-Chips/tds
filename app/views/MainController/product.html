@@ -1,5 +1,6 @@
-<!-- <div class="ui container">
-    <div class="ui two column grid">
+<div class="ui container">
+
+    <div class="ui two column  grid">
         <div class="black column">
             <h1>Section</h1>
             <div class="black column">
@@ -8,6 +9,32 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="column">
+
+            <h2> {{ section.name }} </h2>
+            <fieldset>
+                <legend>Fiche produits</legend>
+                <div class="ui equal width center aligned padded grid">
+                    <div class="ui three column grid">
+                        <div class="column">
+                            <img src="/public/assets/img/{{ product.image }}.jpg" alt="alternatetext" width="150"
+                                height="120">
+                            <p>{{product.comments}}</p>
+                        </div>
+                        <div class="column">
+                            <h3>{{ product.name }}</h3>
+                            <span class="ui blue text">
+                                <h4><strong>{{product.price}}€</strong></h4>
+                            </span>
+                            <span class="ui red text">
+                                {% if product.promotion != "0.00"%}
+                                <h4>{{ product.promotion }}</h4>
+                                {%endif%}
+                            </span>
+                            <button class="ui primary button"><i class="shopping cart icon"></i>+</button>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
     </div>
-</div> -->
-<p>mkqlzjdf</p>
