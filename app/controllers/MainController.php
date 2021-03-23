@@ -10,6 +10,7 @@ use Ubiquity\controllers\auth\WithAuthTrait;
 use Ubiquity\orm\DAO;
 use Ubiquity\utils\http\USession;
 
+
 /**
  * Controller MainController
  **/
@@ -45,5 +46,11 @@ class MainController extends ControllerBase
 		$section = DAO::getById(Section::class, $id, ['products']);
 		$sections = DAO::getAll(Section::class, '', ['products']);
 		$this->loadView('MainController/section.html', ['section' => $section, 'sections' => $sections, 'product' => $product]);
+	}
+
+	#[Route('/product/{idProduct}', name: 'product')]
+	public function product($idSection, $idProduct)
+	{
+		$this->loadView('MainController/product.html');
 	}
 }
