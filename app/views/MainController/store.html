@@ -15,7 +15,7 @@
                     <tr>
                         {% for prod in promo %}
                         <td>
-                            <a href="/{{ path('product', [section.id, prod.id]) }}">
+                            <a href="/{{ path('product', [prod.section, prod.id]) }}">
                                 <img src="../../public/assets/img/{{prod.image}}.jpg" alt="alternatetext" width="100"
                                     height="80">
 
@@ -23,7 +23,10 @@
                                 <strong>{{prod.price}}€</strong>
                                 <span class="ui red text"> {{ prod.promotion }}% </span>
                             </a>
+                            <a href="{{path('addBasket',[prod.id,1])}}"><i class="shopping cart icon"></i></a>
+
                         </td>
+
                         {% endfor %}
                     </tr>
                 </table>

@@ -3,14 +3,14 @@
         <div class="row">
             <fieldset class="column">
                 <legend>Store</legend>
-                <button class="ui black button">Mes Commandes</button>
+                <button class="ui black button">Mes Commandes ({{ nbOrders }})</button>
                 <a href="{{ path('store') }}" class="fluid ui black button">Parcourir le store</a>
             </fieldset>
             <div class="column"></div>
             <fieldset class="column">
                 <legend>Paniers</legend>
-                <button class="fluid ui green button">Nouveau</button>
-                <button class="fluid ui black button">Mes Paniers</button>
+                <a href="{{ path('newBasket') }}" class="fluid ui green button">Nouveau</a><br>
+                <a href="{{ path('basket') }}" class="fluid ui black button">Mes paniers ({{ nbBaskets }})</a>
             </fieldset>
         </div>
         <fieldset class="row ">
@@ -26,7 +26,9 @@
                         <div>{{ prod.name }}</div>
                         <strong>{{prod.price}}€</strong>
                         <span class="ui red text"> {{ prod.promotion }}% </span>
+
                     </a>
+                    <a href="{{path('addBasket',[prod.id,1])}}"><i class="shopping cart icon"></i></a>
                     </td>
                     {% endfor %}
                 </tr>

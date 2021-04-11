@@ -12,9 +12,21 @@
 	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css') }}
 	{{css('css/style.css') | raw}}
 	{% endblock %}
+	{% block menu %}
+	<div class="ui basic inverted segment">
+		<div class="ui container">
+			<div class="ui inverted secondary menu">
+				<a href="/{{ path('home') }}" class="item">Menu</a>
+				<div class="ui inverted item right floated"><a href="#" class="ui button">Panier €</a>
+					{%block menuUser%}
+					{%endblock%}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
 </head>
 
 <body>
-	<a href="/{{path('home')}}">Menu</a>
 	{% block head %}
 	{% endblock %}

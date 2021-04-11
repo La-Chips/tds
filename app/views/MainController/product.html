@@ -31,7 +31,9 @@
                                 <h4>{{ product.promotion }}</h4>
                                 {%endif%}
                             </span>
-                            <button class="ui primary button"><i class="shopping cart icon"></i>+</button>
+
+                            <a href="{{path('addBasket',[prod.id,1])}}" class="ui primary button"><i
+                                    class="shopping cart icon"></i>+</a>
                         </div>
                     </div>
 

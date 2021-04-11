@@ -1,15 +1,16 @@
+{%block menuUser%}
 <div id="_userInfo">
-{% block _before %}
-{% endblock %}
-{%if connected is not null %}
+	{% block _before %}
+	{% endblock %}
+	{%if connected is not null %}
 	{% block _beforeConnected %}
 	{% endblock %}
 	{% block _userInfo %}
 	<div class="ui label">
-	{{ connected | raw }}
+		{{ connected | raw }}
 	</div>
 	&nbsp;
-	{% endblock %} 
+	{% endblock %}
 	{% block _logoutButton %}
 	<a href="{{authURL}}/terminate" class="ui black button ajax _logout" data-target="{{bodySelector}}">
 		{% block _logoutCaption %}
@@ -17,7 +18,7 @@
 		{% endblock %}
 	</a>
 	{% endblock %}
-{% else %}
+	{% else %}
 	{% block _beforeNotConnected %}
 	{% endblock %}
 	{% block _loginButton %}
@@ -27,7 +28,8 @@
 		{% endblock %}
 	</a>
 	{% endblock %}
-{% endif %}
-{% block _after %}
-{% endblock %}
+	{% endif %}
+	{% block _after %}
+	{% endblock %}
 </div>
+{%endblock%}
